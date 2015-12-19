@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    tools:context="com.example.hw9_zillow.Charts" >
+    
+ <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:id="@+id/historicalHeading"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:id="@+id/addressHeading"
+        android:layout_gravity="center"
+        android:layout_below="@id/historicalHeading"
+        android:layout_centerHorizontal="true"
+        android:textSize="16dp"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chartImageView"
+        android:layout_below="@id/addressHeading"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:id="@+id/buttonLayout"
+        android:layout_below="@id/chartImageView"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Previous"
+            android:id="@+id/btnPrevious"
+            android:layout_gravity="center"
+            android:layout_below="@id/chartImageView"
+            android:visibility="invisible"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Next"
+            android:id="@+id/btnNext"
+            android:layout_gravity="center"
+            android:layout_below="@id/chartImageView"
+            android:layout_toRightOf="@id/btnPrevious"
+            android:visibility="invisible"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u00a9Zillow,Inc.2006-2014"
+        android:layout_below="@id/buttonLayout"
+        android:id="@+id/footer1"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/footer1"
+        android:id="@+id/footer2"
+        android:linksClickable="true"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/footer2"
+        android:id="@+id/footer3"
+        android:linksClickable="true"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
